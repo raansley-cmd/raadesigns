@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — RAA Designs</title>
+  <link rel="stylesheet" href="raa-styles.css">
+  <style>
+
+    /* ── SERVICES HERO ── */
+    .services-hero {
+      background: var(--navy-deep);
+      padding: 100px 40px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .services-hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(201,169,110,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .services-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 4vw, 58px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .services-hero h1 em { font-style: italic; color: var(--gold); }
+    .services-hero p {
+      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba(248,245,239,0.65);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.85;
+    }
+
+    /* ── CORE SERVICES ── */
+    .core-services {
+      padding: 100px 40px;
+      background: var(--cream);
+    }
+    .core-header {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+    .core-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .core-header h2 em { font-style: italic; color: var(--blue-soft); }
+
+    .service-row {
+      max-width: 1100px;
+      margin: 0 auto 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .service-row:last-child { margin-bottom: 0; }
+    .service-row.reverse { direction: rtl; }
+    .service-row.reverse > * { direction: ltr; }
+
+    .service-visual {
+      background: var(--navy);
+      padding: 48px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-visual::before {
+      content: '';
+      position: absolute;
+      bottom: -40px; right: -40px;
+      width: 200px; height: 200px;
+      background: radial-gradient(circle, rgba(201,169,110,0.15) 0%, transparent 70%);
+    }
+    .service-visual-icon {
+      font-size: 72px;
+      display: block;
+      margin-bottom: 20px;
+    }
+    .service-visual h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .service-visual p {
+      font-family: 'Raleway', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(248,245,239,0.4);
+    }
+
+    .service-detail h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .service-detail h3 em { font-style: italic; color: var(--blue-soft); }
+    .service-detail .section-divider { margin: 20px 0; }
+    .service-detail p {
+      font-family: 'Raleway', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      color: #4A5568;
+      line-height: 1.95;
+      margin-bottom: 24px;
+    }
+    .service-includes {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .service-includes li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--navy);
+      line-height: 1.6;
+    }
+    .service-includes li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ── ADD-ONS ── */
+    .addons-section {
+      background: var(--navy);
+      padding: 100px 40px;
+    }
+    .addons-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .addons-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .addons-header h2 em { font-style: italic; color: var(--gold); }
+    .addons-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .addon-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,169,110,0.2);
+      padding: 28px 22px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .addon-card:hover {
+      border-color: var(--gold);
+      background: rgba(201,169,110,0.06);
+    }
+    .addon-icon {
+      font-size: 28px;
+      display: block;
+      margin-bottom: 12px;
+    }
+    .addon-card h3 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .addon-card p {
+      font-family: 'Raleway', sans-serif;
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(248,245,239,0.55);
+      line-height: 1.8;
+    }
+
+    /* ── TECH STACK ── */
+    .tech-section {
+      background: var(--cream-dark);
+      padding: 80px 40px;
+      text-align: center;
+    }
+    .tech-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0;
+    }
+    .tech-section h2 em { font-style: italic; color: var(--blue-soft); }
+    .tech-grid {
+      max-width: 900px;
+      margin: 48px auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    .tech-tag {
+      background: var(--navy);
+      color: var(--gold);
+      font-family: 'Raleway', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 10px 20px;
+    }
+
+    /* ── CTA ── */
+    .services-cta {
+      background: var(--navy-deep);
+      padding: 80px 40px;
+      text-align: center;
+    }
+    .services-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+    .services-cta h2 em { font-style: italic; color: var(--gold); }
+    .services-cta p {
+      font-family: 'Raleway', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(248,245,239,0.6);
+      max-width: 480px;
+      margin: 0 auto 36px;
+      line-height: 1.85;
+    }
+    .cta-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Mobile */
+    @media (max-width: 900px) {
+      .services-hero { padding: 72px 24px 56px; }
+      .core-services { padding: 56px 24px; }
+      .service-row { grid-template-columns: 1fr; gap: 36px; }
+      .service-row.reverse { direction: ltr; }
+      .addons-section { padding: 56px 24px; }
+      .addons-grid { grid-template-columns: repeat(2, 1fr); }
+      .tech-section { padding: 56px 24px; }
+      .services-cta { padding: 56px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">RAA<span>.</span>Designs</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="faqs.html">FAQs</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- HERO -->
+<section class="services-hero">
+  <p class="section-label">What I Offer</p>
+  <h1>Services Built for<br><em>Small Business Success</em></h1>
+  <div class="section-divider"></div>
+  <p>From a simple business website to a full e-commerce store with payment processing — every service is delivered with custom code, beautiful design, and real results.</p>
+</section>
+
+<!-- CORE SERVICES -->
+<section class="core-services">
+  <div class="core-header">
+    <p class="section-label">Core Services</p>
+    <h2>Everything Your Business<br><em>Needs Online</em></h2>
+    <div class="section-divider"></div>
+  </div>
+
+  <!-- Service 1 -->
+  <div class="service-row">
+    <div class="service-visual">
+      <span class="service-visual-icon">💻</span>
+      <h3>Custom Website Design</h3>
+      <p>HTML · CSS · JavaScript</p>
+    </div>
+    <div class="service-detail">
+      <p class="section-label">Service 01</p>
+      <h3>Custom Website<br><em>Design & Development</em></h3>
+      <div class="section-divider left"></div>
+      <p>Every website I build is coded from scratch — no templates, no drag-and-drop builders. Your site will be completely unique, lightning fast, and perfectly tailored to your brand identity.</p>
+      <ul class="service-includes">
+        <li>Multi-page responsive website (up to 7 pages)</li>
+        <li>Custom color palette and typography matching your brand</li>
+        <li>Mobile-first design that looks great on all devices</li>
+        <li>Contact and inquiry forms with email notifications</li>
+        <li>Photo gallery and portfolio sections</li>
+        <li>Free hosting setup on GitHub Pages</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Service 2 -->
+  <div class="service-row reverse">
+    <div class="service-visual">
+      <span class="service-visual-icon">🛒</span>
+      <h3>E-Commerce & Payments</h3>
+      <p>Stripe · Shopping Cart · Checkout</p>
+    </div>
+    <div class="service-detail">
+      <p class="section-label">Service 02</p>
+      <h3>E-Commerce &<br><em>Payment Integration</em></h3>
+      <div class="section-divider left"></div>
+      <p>Full shopping cart experiences with Stripe payment integration. I build the entire checkout flow — from browsing your products to a secure, beautiful payment page — all on one seamless experience.</p>
+      <ul class="service-includes">
+        <li>Slide-out shopping cart drawer with item thumbnails</li>
+        <li>Stripe checkout supporting Visa, Mastercard, Amex, Apple Pay & Google Pay</li>
+        <li>Secure backend server on Render.com</li>
+        <li>Order notification emails to you instantly</li>
+        <li>Customer confirmation emails</li>
+        <li>Beautiful success page after payment</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Service 3 -->
+  <div class="service-row">
+    <div class="service-visual">
+      <span class="service-visual-icon">⚙️</span>
+      <h3>Backend Development</h3>
+      <p>Node.js · Express · Render.com</p>
+    </div>
+    <div class="service-detail">
+      <p class="section-label">Service 03</p>
+      <h3>Backend Server<br><em>& Integration</em></h3>
+      <div class="section-divider left"></div>
+      <p>Not just pretty pages — I build the technical infrastructure behind your website. From payment processing servers to automated email systems, your site will work as hard as you do.</p>
+      <ul class="service-includes">
+        <li>Node.js / Express backend server</li>
+        <li>Free deployment on Render.com</li>
+        <li>Stripe API secure payment processing</li>
+        <li>Nodemailer email notification system</li>
+        <li>Environment variable security for API keys</li>
+        <li>CORS configuration for secure cross-origin requests</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Service 4 -->
+  <div class="service-row reverse">
+    <div class="service-visual">
+      <span class="service-visual-icon">🚀</span>
+      <h3>Hosting & Deployment</h3>
+      <p>GitHub Pages · Free · Forever</p>
+    </div>
+    <div class="service-detail">
+      <p class="section-label">Service 04</p>
+      <h3>Free Hosting<br><em>& Deployment</em></h3>
+      <div class="section-divider left"></div>
+      <p>One of the biggest advantages of working with me — I deploy your website to GitHub Pages and Render.com, giving you professional, fast, and reliable hosting with absolutely no monthly fees. Ever.</p>
+      <ul class="service-includes">
+        <li>GitHub repository setup and management</li>
+        <li>GitHub Pages deployment (free hosting for life)</li>
+        <li>Render.com backend deployment (free tier)</li>
+        <li>SSL certificate (HTTPS) included automatically</li>
+        <li>Custom domain connection if you have one</li>
+        <li>Full handoff with instructions so you can update it yourself</li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+<!-- ADD-ONS -->
+<section class="addons-section">
+  <div class="addons-header">
+    <p class="section-label">Extra Services</p>
+    <h2>Available <em>Add-Ons</em></h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="addons-grid">
+    <div class="addon-card">
+      <span class="addon-icon">📍</span>
+      <h3>Google Maps</h3>
+      <p>Interactive delivery area or location map embedded directly in your site.</p>
+    </div>
+    <div class="addon-card">
+      <span class="addon-icon">✉️</span>
+      <h3>Email Automation</h3>
+      <p>Automated order confirmations and inquiry responses sent directly to your customers.</p>
+    </div>
+    <div class="addon-card">
+      <span class="addon-icon">❓</span>
+      <h3>FAQs Page</h3>
+      <p>Elegant accordion-style FAQ page that answers your customers' most common questions.</p>
+    </div>
+    <div class="addon-card">
+      <span class="addon-icon">🖼️</span>
+      <h3>Photo Gallery</h3>
+      <p>Stunning gallery page showcasing your products, work, or portfolio with real photos.</p>
+    </div>
+    <div class="addon-card">
+      <span class="addon-icon">🗺️</span>
+      <h3>Delivery Areas</h3>
+      <p>Custom delivery zone page with map and list of cities you serve.</p>
+    </div>
+    <div class="addon-card">
+      <span class="addon-icon">⭐</span>
+      <h3>Testimonials</h3>
+      <p>Beautiful client reviews section that builds trust and converts visitors into customers.</p>
+    </div>
+    <div class="addon-card">
+      <span class="addon-icon">📱</span>
+      <h3>Social Media Icons</h3>
+      <p>Linked social media icons in the footer connecting your site to all your platforms.</p>
+    </div>
+    <div class="addon-card">
+      <span class="addon-icon">⚡</span>
+      <h3>Speed Optimization</h3>
+      <p>Performance tuning to ensure your site loads fast and scores well on all devices.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section class="tech-section">
+  <p class="section-label">Technologies I Use</p>
+  <h2>Built With the <em>Best Tools</em></h2>
+  <div class="section-divider"></div>
+  <div class="tech-grid">
+    <span class="tech-tag">HTML5</span>
+    <span class="tech-tag">CSS3</span>
+    <span class="tech-tag">JavaScript</span>
+    <span class="tech-tag">Node.js</span>
+    <span class="tech-tag">Express.js</span>
+    <span class="tech-tag">Stripe API</span>
+    <span class="tech-tag">Nodemailer</span>
+    <span class="tech-tag">Web3Forms</span>
+    <span class="tech-tag">GitHub Pages</span>
+    <span class="tech-tag">Render.com</span>
+    <span class="tech-tag">Google Maps API</span>
+    <span class="tech-tag">Google Fonts</span>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="services-cta">
+  <p class="section-label">Ready to Get Started?</p>
+  <h2>Let's Build Your<br><em>Dream Website</em></h2>
+  <p>Not sure which services you need? Get in touch and I'll help you figure out exactly what your business requires.</p>
+  <div class="cta-btns">
+    <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+    <a href="pricing.html" class="btn-outline">View Pricing</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">RAA<span>.</span>Designs</span>
+  <div class="footer-line"></div>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="faqs.html">FAQs</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <p class="footer-copy">&copy; 2025 RAA Designs &nbsp;&middot;&nbsp; Rebecca Ansley &nbsp;&middot;&nbsp; Temecula, CA<br>Professional Web Design &amp; Development</p>
+</footer>
+
+</body>
+</html>
