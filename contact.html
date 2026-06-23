@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Rebecca Ansley — Get a Free Web Design Quote | RAA Designs</title>
+  <meta name="description" content="Get a free quote for your custom website. Contact Rebecca Ansley at RAA Designs — professional web designer based in Temecula, CA serving clients nationwide.">
+  <meta name="keywords" content="contact web designer, free website quote, hire web developer Temecula, get website built, RAA Designs contact, Rebecca Ansley web design quote">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Rebecca Ansley — RAA Designs">
+  <link rel="canonical" href="https://raansley-cmd.github.io/raadesigns/contact">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://raansley-cmd.github.io/raadesigns/contact">
+  <meta property="og:title" content="Contact — Get a Free Quote | RAA Designs">
+  <meta property="og:description" content="Get a free quote for your custom website. Contact Rebecca Ansley at RAA Designs — professional web designer based in Temecula, CA serving clients nationwide.">
+  <meta property="og:site_name" content="RAA Designs">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact — Get a Free Quote | RAA Designs">
+  <meta name="twitter:description" content="Get a free quote for your custom website. Contact Rebecca Ansley at RAA Designs — professional web designer based in Temecula, CA serving clients nationwide.">
+  <link rel="stylesheet" href="raa-styles.css">
+  <style>
+
+    /* ── CONTACT HERO ── */
+    .contact-hero {
+      background: var(--navy-deep);
+      padding: 100px 40px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-hero::before {
+      content: '';
+      position: absolute;
+      bottom: -80px; right: -80px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(201,169,110,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .contact-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 4vw, 58px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .contact-hero h1 em { font-style: italic; color: var(--gold); }
+    .contact-hero p {
+      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba(248,245,239,0.65);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.85;
+    }
+
+    /* ── CONTACT MAIN ── */
+    .contact-main {
+      padding: 100px 40px;
+      background: var(--cream);
+    }
+    .contact-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 72px;
+      align-items: start;
+    }
+
+    /* ── FORM ── */
+    .contact-form-wrap h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .contact-form-wrap h2 em { font-style: italic; color: var(--blue-soft); }
+    .contact-form-wrap .section-divider { margin: 20px 0 36px; }
+
+    .form-group {
+      margin-bottom: 22px;
+    }
+    .form-group label {
+      display: block;
+      font-family: 'Raleway', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      font-family: 'Raleway', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--navy);
+      background: var(--white);
+      border: 1px solid #D1D9E6;
+      padding: 14px 16px;
+      outline: none;
+      border-radius: 0;
+      box-sizing: border-box;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--gold); }
+    .form-group textarea { resize: vertical; min-height: 140px; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-required { color: var(--gold); }
+
+    .form-submit {
+      margin-top: 8px;
+    }
+    .btn-submit {
+      background: var(--navy);
+      color: var(--cream);
+      font-family: 'Raleway', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      padding: 16px 48px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      width: 100%;
+    }
+    .btn-submit:hover { background: var(--navy-mid); }
+    .btn-submit:disabled { background: #9AA87A; cursor: not-allowed; }
+
+    /* Messages */
+    .msg-success, .msg-error {
+      display: none;
+      padding: 16px 20px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      margin-top: 16px;
+      line-height: 1.6;
+    }
+    .msg-success { background: #EDF7ED; color: #2E7D32; border-left: 3px solid #2E7D32; }
+    .msg-error   { background: #FDECEA; color: #C62828; border-left: 3px solid #C62828; }
+    .msg-success.visible, .msg-error.visible { display: block; }
+
+    /* ── SIDEBAR ── */
+    .contact-sidebar {
+      position: sticky;
+      top: 100px;
+    }
+    .sidebar-card {
+      background: var(--navy);
+      padding: 40px 32px;
+      margin-bottom: 20px;
+    }
+    .sidebar-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .contact-info-item:last-child { margin-bottom: 0; }
+    .contact-info-icon {
+      font-size: 20px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .contact-info-label {
+      font-family: 'Raleway', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4px;
+      display: block;
+    }
+    .contact-info-value {
+      font-family: 'Raleway', sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(248,245,239,0.75);
+      line-height: 1.6;
+    }
+
+    /* What to expect */
+    .expect-card {
+      background: var(--cream-dark);
+      padding: 32px;
+    }
+    .expect-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+    .expect-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .expect-item:last-child { margin-bottom: 0; }
+    .expect-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-style: italic;
+      color: var(--gold);
+      flex-shrink: 0;
+      line-height: 1;
+      margin-top: 2px;
+    }
+    .expect-text {
+      font-family: 'Raleway', sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      color: #4A5568;
+      line-height: 1.7;
+    }
+    .expect-text strong {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    /* Mobile */
+    @media (max-width: 900px) {
+      .contact-hero { padding: 72px 24px 56px; }
+      .contact-main { padding: 56px 24px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-sidebar { position: static; }
+      .form-row { grid-template-columns: 1fr; gap: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">RAA<span>.</span>Designs</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="faqs.html">FAQs</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- HERO -->
+<section class="contact-hero">
+  <p class="section-label">Get in Touch</p>
+  <h1>Let&rsquo;s Build Something<br><em>Together</em></h1>
+  <div class="section-divider"></div>
+  <p>Tell me about your business and what you need. I&rsquo;ll get back to you within 1 business day with ideas, recommendations, and a free quote.</p>
+</section>
+
+<!-- CONTACT MAIN -->
+<section class="contact-main">
+  <div class="contact-grid">
+
+    <!-- FORM -->
+    <div class="contact-form-wrap">
+      <p class="section-label">Send a Message</p>
+      <h2>Tell Me About<br><em>Your Project</em></h2>
+      <div class="section-divider left"></div>
+
+      <input type="hidden" name="access_key" value="4b24cde9-9ae0-4a5e-a4e4-4e4c070b20f8">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name <span class="form-required">*</span></label>
+          <input type="text" id="first_name" placeholder="Jane">
+        </div>
+        <div class="form-group">
+          <label>Last Name <span class="form-required">*</span></label>
+          <input type="text" id="last_name" placeholder="Smith">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email Address <span class="form-required">*</span></label>
+          <input type="email" id="email" placeholder="jane@example.com">
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" id="phone" placeholder="(555) 000-0000" maxlength="14" oninput="formatPhone(this)">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Business Name</label>
+        <input type="text" id="business_name" placeholder="Your Business Name">
+      </div>
+
+      <div class="form-group">
+        <label>Which Package Interests You?</label>
+        <select id="package">
+          <option value="" disabled selected>Select a package</option>
+          <option value="Basic — $150">Basic — $150 (3 pages, 7 days)</option>
+          <option value="Standard — $350">Standard — $350 (5 pages, 14 days)</option>
+          <option value="Premium — $650">Premium — $650 (7 pages + e-commerce, 21 days)</option>
+          <option value="Not sure yet">Not sure yet — help me decide</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Tell Me About Your Project <span class="form-required">*</span></label>
+        <textarea id="message" placeholder="Describe your business, what pages you need, your brand colors, any special features (e-commerce, booking, gallery, etc.), and anything else I should know..."></textarea>
+      </div>
+
+      <div class="form-submit">
+        <button class="btn-submit" id="submit-btn" onclick="handleSubmit()">Send Message</button>
+      </div>
+
+      <div class="msg-success" id="msg-success">
+        &#10003;&nbsp; Thank you! Your message has been sent. I&rsquo;ll get back to you within 1 business day with ideas and a free quote.
+      </div>
+      <div class="msg-error" id="msg-error">
+        Something went wrong. Please try again or email me directly at raansley@gmail.com
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="contact-sidebar">
+      <div class="sidebar-card">
+        <h3>Contact Info</h3>
+        <div class="contact-info-item">
+          <span class="contact-info-icon">✉️</span>
+          <div>
+            <span class="contact-info-label">Email</span>
+            <span class="contact-info-value">raansley@gmail.com</span>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-icon">📍</span>
+          <div>
+            <span class="contact-info-label">Location</span>
+            <span class="contact-info-value">Temecula, CA<br>Serving clients nationwide</span>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-icon">⏱️</span>
+          <div>
+            <span class="contact-info-label">Response Time</span>
+            <span class="contact-info-value">Within 1 business day</span>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-icon">💳</span>
+          <div>
+            <span class="contact-info-label">Payment Methods</span>
+            <span class="contact-info-value">Zelle &nbsp;·&nbsp; Venmo &nbsp;·&nbsp; PayPal</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="expect-card">
+        <h3>What to Expect</h3>
+        <div class="expect-item">
+          <span class="expect-num">1</span>
+          <p class="expect-text"><strong>You reach out</strong> — fill in the form and tell me about your project.</p>
+        </div>
+        <div class="expect-item">
+          <span class="expect-num">2</span>
+          <p class="expect-text"><strong>I respond within 1 day</strong> — with questions, ideas, and a free quote.</p>
+        </div>
+        <div class="expect-item">
+          <span class="expect-num">3</span>
+          <p class="expect-text"><strong>We agree on the details</strong> — pages, design, timeline, and price.</p>
+        </div>
+        <div class="expect-item">
+          <span class="expect-num">4</span>
+          <p class="expect-text"><strong>I get to work</strong> — and keep you updated throughout the build.</p>
+        </div>
+        <div class="expect-item">
+          <span class="expect-num">5</span>
+          <p class="expect-text"><strong>You review and approve</strong> — revisions until you love it.</p>
+        </div>
+        <div class="expect-item">
+          <span class="expect-num">6</span>
+          <p class="expect-text"><strong>We go live!</strong> — your beautiful new website launches to the world.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">RAA<span>.</span>Designs</span>
+  <div class="footer-line"></div>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="faqs.html">FAQs</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <p class="footer-copy">&copy; 2025 RAA Designs &nbsp;&middot;&nbsp; Rebecca Ansley &nbsp;&middot;&nbsp; Temecula, CA<br>Professional Web Design &amp; Development</p>
+</footer>
+
+<script>
+  // ── Phone formatter ──
+  function formatPhone(input) {
+    var digits = input.value.replace(/\D/g, '').slice(0, 10);
+    var result = '';
+    if (digits.length === 0)      result = '';
+    else if (digits.length <= 3)  result = '(' + digits;
+    else if (digits.length <= 6)  result = '(' + digits.slice(0,3) + ') ' + digits.slice(3);
+    else result = '(' + digits.slice(0,3) + ') ' + digits.slice(3,6) + '-' + digits.slice(6);
+    input.value = result;
+  }
+
+  // ── Form submission ──
+  function handleSubmit() {
+    var btn        = document.getElementById('submit-btn');
+    var successMsg = document.getElementById('msg-success');
+    var errorMsg   = document.getElementById('msg-error');
+
+    if (btn.disabled) return;
+
+    // Reset
+    document.querySelectorAll('input, select, textarea').forEach(function(el) {
+      el.style.borderColor = '';
+    });
+    successMsg.classList.remove('visible');
+    errorMsg.classList.remove('visible');
+
+    // Validate required fields
+    var valid = true;
+    ['first_name', 'last_name', 'email', 'message'].forEach(function(id) {
+      var el = document.getElementById(id);
+      if (!el || !el.value.trim()) {
+        if (el) el.style.borderColor = '#C62828';
+        valid = false;
+      }
+    });
+    if (!valid) return;
+
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    var payload = {
+      access_key:      '4b24cde9-9ae0-4a5e-a4e4-4e4c070b20f8',
+      subject:         'New Project Inquiry — RAA Designs',
+      from_name:       'RAA Designs Website',
+      Name:            document.getElementById('first_name').value.trim() + ' ' + document.getElementById('last_name').value.trim(),
+      Email:           document.getElementById('email').value.trim(),
+      Phone:           document.getElementById('phone').value.trim() || 'Not provided',
+      'Business Name': document.getElementById('business_name').value.trim() || 'Not provided',
+      'Package':       document.getElementById('package').value || 'Not selected',
+      'Message':       document.getElementById('message').value.trim()
+    };
+
+    fetch('https://api.web3forms.com/submit', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body:    JSON.stringify(payload)
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(result) {
+      if (result.success) {
+        successMsg.classList.add('visible');
+        errorMsg.classList.remove('visible');
+        document.querySelectorAll('input, select, textarea').forEach(function(el) {
+          el.value = '';
+        });
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+        successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } else {
+        throw new Error(result.message || 'Failed');
+      }
+    })
+    .catch(function(err) {
+      errorMsg.classList.add('visible');
+      successMsg.classList.remove('visible');
+      btn.disabled = false;
+      btn.textContent = 'Send Message';
+    });
+  }
+</script>
+
+</body>
+</html>

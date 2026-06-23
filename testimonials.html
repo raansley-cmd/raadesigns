@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Testimonials & Reviews — RAA Designs</title>
+  <meta name="description" content="Read what clients say about working with Rebecca Ansley at RAA Designs. Real reviews from small business owners who got beautiful, functional custom websites.">
+  <meta name="keywords" content="web designer reviews, RAA Designs testimonials, Rebecca Ansley reviews, web design client feedback, Fiverr web designer reviews">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Rebecca Ansley — RAA Designs">
+  <link rel="canonical" href="https://raansley-cmd.github.io/raadesigns/testimonials">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://raansley-cmd.github.io/raadesigns/testimonials">
+  <meta property="og:title" content="Client Testimonials — RAA Designs">
+  <meta property="og:description" content="Read what clients say about working with Rebecca Ansley at RAA Designs. Real reviews from small business owners who got beautiful, functional custom websites.">
+  <meta property="og:site_name" content="RAA Designs">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Client Testimonials — RAA Designs">
+  <meta name="twitter:description" content="Read what clients say about working with Rebecca Ansley at RAA Designs. Real reviews from small business owners who got beautiful, functional custom websites.">
+  <link rel="stylesheet" href="raa-styles.css">
+  <style>
+
+    /* ── TESTIMONIALS HERO ── */
+    .testimonials-hero {
+      background: var(--navy-deep);
+      padding: 100px 40px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonials-hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; left: 50%;
+      transform: translateX(-50%);
+      width: 700px; height: 400px;
+      background: radial-gradient(circle, rgba(201,169,110,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .testimonials-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 4vw, 58px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .testimonials-hero h1 em { font-style: italic; color: var(--gold); }
+    .testimonials-hero p {
+      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba(248,245,239,0.65);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.85;
+    }
+
+    /* ── FEATURED TESTIMONIAL ── */
+    .featured-testimonial {
+      background: var(--navy);
+      padding: 80px 40px;
+      text-align: center;
+    }
+    .quote-mark {
+      font-family: 'Playfair Display', serif;
+      font-size: 120px;
+      color: var(--gold);
+      opacity: 0.2;
+      line-height: 0.6;
+      margin-bottom: 32px;
+      display: block;
+    }
+    .featured-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(20px, 2.5vw, 28px);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.7;
+      max-width: 860px;
+      margin: 0 auto 36px;
+    }
+    .featured-author {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .featured-author-name {
+      font-family: 'Dancing Script', cursive;
+      font-size: 26px;
+      color: var(--gold);
+    }
+    .featured-author-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(248,245,239,0.45);
+    }
+    .featured-stars {
+      font-size: 18px;
+      letter-spacing: 4px;
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    /* ── TESTIMONIALS GRID ── */
+    .testimonials-section {
+      padding: 100px 40px;
+      background: var(--cream);
+    }
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .testimonials-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .testimonials-header h2 em { font-style: italic; color: var(--blue-soft); }
+    .testimonials-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .testimonial-card {
+      background: var(--white);
+      padding: 36px 32px;
+      border-top: 3px solid var(--gold);
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(27,42,74,0.08);
+    }
+    .testimonial-quote-mark {
+      font-family: 'Playfair Display', serif;
+      font-size: 64px;
+      color: var(--gold);
+      opacity: 0.15;
+      line-height: 0.8;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .testimonial-stars {
+      font-size: 13px;
+      letter-spacing: 3px;
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: block;
+    }
+    .testimonial-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-style: italic;
+      color: #4A5568;
+      line-height: 1.85;
+      margin-bottom: 28px;
+    }
+    .testimonial-divider {
+      width: 32px; height: 1px;
+      background: var(--gold);
+      margin-bottom: 20px;
+      opacity: 0.5;
+    }
+    .testimonial-author-name {
+      font-family: 'Dancing Script', cursive;
+      font-size: 20px;
+      color: var(--navy);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .testimonial-author-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .testimonial-project-tag {
+      display: inline-block;
+      margin-top: 12px;
+      background: var(--cream-dark);
+      color: var(--navy);
+      font-family: 'Raleway', sans-serif;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+    }
+
+    /* ── COMING SOON TESTIMONIALS ── */
+    .more-reviews {
+      background: var(--cream-dark);
+      padding: 80px 40px;
+      text-align: center;
+    }
+    .more-reviews h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+    .more-reviews h2 em { font-style: italic; color: var(--blue-soft); }
+    .more-reviews p {
+      font-family: 'Raleway', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin: 0 auto 36px;
+      line-height: 1.85;
+    }
+    .platforms {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 36px;
+    }
+    .platform-badge {
+      background: var(--navy);
+      color: var(--cream);
+      font-family: 'Raleway', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .platform-badge span { font-size: 16px; }
+
+    /* ── CTA ── */
+    .testimonials-cta {
+      background: var(--navy);
+      padding: 80px 40px;
+      text-align: center;
+    }
+    .testimonials-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+    .testimonials-cta h2 em { font-style: italic; color: var(--gold); }
+    .testimonials-cta p {
+      font-family: 'Raleway', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(248,245,239,0.6);
+      max-width: 460px;
+      margin: 0 auto 36px;
+      line-height: 1.85;
+    }
+    .cta-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Mobile */
+    @media (max-width: 900px) {
+      .testimonials-hero { padding: 72px 24px 56px; }
+      .featured-testimonial { padding: 56px 24px; }
+      .testimonials-section { padding: 56px 24px; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .more-reviews { padding: 56px 24px; }
+      .testimonials-cta { padding: 56px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">RAA<span>.</span>Designs</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="faqs.html">FAQs</a></li>
+    <li><a href="testimonials.html" class="active">Testimonials</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- HERO -->
+<section class="testimonials-hero">
+  <p class="section-label">Client Reviews</p>
+  <h1>What My Clients<br><em>Are Saying</em></h1>
+  <div class="section-divider"></div>
+  <p>Real feedback from real small business owners who trusted me to build their online presence.</p>
+</section>
+
+<!-- FEATURED TESTIMONIAL -->
+<section class="featured-testimonial">
+  <span class="quote-mark">&ldquo;</span>
+  <span class="featured-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+  <p class="featured-quote">Rebecca built us a website that we are truly proud of. From the beautiful design to the fully working shopping cart and Stripe checkout &mdash; everything was done with incredible attention to detail. She was patient, professional, and genuinely passionate about getting it right. Our customers love it and so do we.</p>
+  <div class="featured-author">
+    <span class="featured-author-name">Skylar</span>
+    <span class="featured-author-title">Skylar&rsquo;s Plant Based Cooking &nbsp;&middot;&nbsp; Temecula, CA</span>
+  </div>
+</section>
+
+<!-- TESTIMONIALS GRID -->
+<section class="testimonials-section">
+  <div class="testimonials-header">
+    <p class="section-label">More Reviews</p>
+    <h2>Happy Clients,<br><em>Beautiful Websites</em></h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="testimonials-grid">
+
+    <div class="testimonial-card">
+      <span class="testimonial-quote-mark">&ldquo;</span>
+      <span class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <p class="testimonial-text">I had no idea what I needed for my website and Rebecca walked me through every single step. She built something that looks so professional and actually works on phones too. My customers can now order cookies directly through the site!</p>
+      <div class="testimonial-divider"></div>
+      <span class="testimonial-author-name">Alyssa</span>
+      <span class="testimonial-author-title">Owner</span>
+      <span class="testimonial-project-tag">Sweet Smile Cookies</span>
+    </div>
+
+    <div class="testimonial-card">
+      <span class="testimonial-quote-mark">&ldquo;</span>
+      <span class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <p class="testimonial-text">What impressed me most was that Rebecca built everything from scratch &mdash; no templates. The site is fast, beautiful, and completely unique to my brand. She also set up free hosting which saves me money every single month.</p>
+      <div class="testimonial-divider"></div>
+      <span class="testimonial-author-name">Skylar</span>
+      <span class="testimonial-author-title">Owner</span>
+      <span class="testimonial-project-tag">Skylar&rsquo;s Plant Based Cooking</span>
+    </div>
+
+    <div class="testimonial-card">
+      <span class="testimonial-quote-mark">&ldquo;</span>
+      <span class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <p class="testimonial-text">Rebecca is incredibly talented and dedicated. She didn&rsquo;t just build a website &mdash; she built a complete online business for me. The Stripe integration, the shopping cart, the order emails &mdash; everything works perfectly. I couldn&rsquo;t be happier.</p>
+      <div class="testimonial-divider"></div>
+      <span class="testimonial-author-name">Skylar</span>
+      <span class="testimonial-author-title">Owner</span>
+      <span class="testimonial-project-tag">Skylar&rsquo;s Plant Based Cooking</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- MORE COMING -->
+<section class="more-reviews">
+  <p class="section-label">Growing</p>
+  <h2>More Reviews<br><em>Coming Soon</em></h2>
+  <p>I&rsquo;m actively building new projects and collecting client feedback. As my portfolio grows so will this page. You can also find my reviews on Fiverr.</p>
+  <div class="platforms">
+    <a href="https://www.fiverr.com/rebeccaansley?public_mode=true" target="_blank" class="platform-badge" style="text-decoration:none;"><span>⭐</span> Fiverr Reviews</a>
+    <div class="platform-badge" style="opacity:0.4;cursor:default;" title="Coming Soon"><span>🌐</span> Google Reviews — Coming Soon</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="testimonials-cta">
+  <p class="section-label">Join My Happy Clients</p>
+  <h2>Ready to Love<br><em>Your Website?</em></h2>
+  <p>Let&rsquo;s build something you&rsquo;re proud to share. Get in touch today for a free quote and let&rsquo;s get started.</p>
+  <div class="cta-btns">
+    <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+    <a href="portfolio.html" class="btn-outline">View My Work</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">RAA<span>.</span>Designs</span>
+  <div class="footer-line"></div>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="faqs.html">FAQs</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <p class="footer-copy">&copy; 2025 RAA Designs &nbsp;&middot;&nbsp; Rebecca Ansley &nbsp;&middot;&nbsp; Temecula, CA<br>Professional Web Design &amp; Development</p>
+</footer>
+
+</body>
+</html>
